@@ -1,8 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Sourabh Bajaj
-% License : MIT
-%------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -16,8 +11,10 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -43,10 +40,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
@@ -54,12 +48,10 @@
   }
 }
 
-% Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+\newcommand{\resumeItemBis}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -67,12 +59,6 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -85,126 +71,158 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{document}
+
+\begin{document} 
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-  \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : \href{tel:+11234567890}{+1-123-456-7890} \\
+  \textbf{\Large Quentin-Gabriel Thurier} & Profiles:  \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} \href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} \\
+   quentin.thurier@gmail.com  & 129 Hobsonville road, West Harbour, Auckland, New Zealand\\
+   +64 29 127 2170 & France \& New Zealand citizen
 \end{tabular*}
 
+
+%-------- SKILLS------------
+\section{Skills}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+ \textbf{Science}{: Machine Learning, Deep Learning, Statistics, Natural Language Processing }\\
+ \textbf{Languages}{: Python, Bash, SQL, R, SAS} \\
+ \textbf{Visualisation}{: Dash, Shiny, Tableau, Snowsight, MicroStrategy} \\
+ \textbf{Big Data}{: Snowflake, Elasticsearch, Hadoop, Hive, Spark, Big Query, Redshift, Neo4j} \\
+ \textbf{ML Engineering}{: TensorFlow, scikit-learn, spaCy, Git, Github, GitLab, Prodigy, DVC, Prefect, Docker}\\
+  \textbf{Development Environments}{: VS Code, PyCharm, JupyterLab, JupyterHub, RStudio}\\
+ \textbf{Cloud}{: Amazon Web Services, Google Cloud Platform}\\
+ \textbf{Project Management}{: Confluence, Jira, Jira automation}\\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+	
+	\resumeSubheading
+      {Xero - Science, Evaluation and Measurement team}{Auckland, New Zealand}
+      {Senior Applied Scientist - ML Products}{November 2020 -- Present}
+      \resumeItemListStart
+        \resumeItemBis{Work as a senior member of the cross-functional team in charge of Xero's ML-powered bank reconciliation production system}{.}
+         \resumeItemBis{} {R\&D on \emph{learning to rank} and \emph{named entity recognition} architectures applied to bank statements records - ML engineering - Collaborating with product and intellectual property teams - Mentoring applied scientists}
+           \resumeItemListEnd
+
+	\resumeSubheading
+      {PredictHQ - Data Intelligence team}{Auckland, New Zealand}
+      {NLP Data Scientist}{May 2019 -- November 2020}
+      \resumeItemListStart
+        \resumeItemBis{Developed and maintained PredictHQ's API ML-driven features together with data and software engineers}{.}
+            \resumeItemBis{} {Leading ML projects for events labelling/deduping/ranking from data collection to productionisation - R\&D on \emph{named entity linking} systems with open source knowledge graphs - Mentoring data analysts}
+           \resumeItemListEnd	
+	
+    \resumeSubheading
+      {Orion Health - Research team}{Auckland, New Zealand}
+      {Data Scientist}{February 2017 -- April 2019}
+      \resumeItemListStart
+        \resumeItemBis{Shaped Orion Health's ML-based products features with clinicians and software engineers}{.}
+            \resumeItemBis{} {Implementing ML \emph{classifiers} for health risk calculation - Principal investigator for a multi-disciplinary project on \emph{AI interpretability} - Deep learning for clinical NLP - Mentoring interns and junior data scientists}
+           \resumeItemListEnd
+
+    \resumeSubheading
+      {Qrious - Spark Ventures}{Auckland, New Zealand}
+      {Data Scientist}{September 2015 - January 2017}
+      \resumeItemListStart
+        \resumeItemBis{Worked with data engineers to deliver solutions leveraging Spark New Zealand mobile devices activity data}{.}
+            \resumeItemBis{} {Bespoke \emph{geospatial studies} for the tourism and transport industries - Automating insights discovery with \emph{big data} technologies - R\&D on population flows \emph{clustering}, transport mode and work/home locations inference}
+           \resumeItemListEnd
+
+    \resumeSubheading
+      {NetBooster - Data and Analytics team}{Paris, France}
+      {Senior Data Manager}{July 2014 -- August 2015}
+        \resumeItemListStart
+        \resumeItemBis{Implemented quantitative digital marketing prototypes with server logs data in collaboration with web analytics experts}{.}
+            \resumeItemBis{} {Clickstream \emph{data mining}, Quantifying the efficiency of multi-channel marketing campaigns - R\&D on users online journeys \emph{clustering} - Data engineering}
+           \resumeItemListEnd
+
+    \resumeSubheading
+      {Société Générale Corporate and Investment Banking - Anti-Fraud team}{Paris, France}
+      {Data Scientist}{October 2010 -- October 2013}
+      \resumeItemListStart
+        \resumeItemBis{Worked as part of the cross-functional team responsible for implementing a data-driven strategy to prevent unauthorized trading}{.}
+            \resumeItemBis{} {Bespoke analyses on daily financial transactions - \emph{Unsupervised ML} to segment/rank portfolios - Writing/auditing the scripts at the core of the fraud prevention software}
+           \resumeItemListEnd
+      
+      \resumeSubheading
+      {Société Générale Corporate and Investment Banking - Anti-Fraud team}{Paris, France}
+      {Intern - Master's thesis focused on statistical methods for preventing unauthorized trading}{April 2010 -- Sept. 2010}
+      
+      \resumeSubheading
+      {Colorado State University - Statistics Department}{Fort Collins, USA}
+      {Intern - Time series analyses of carbon emissions}{June -- July 2009}
+      
+      \resumeSubheading
+      {Euler Hermes SFAC (credit insurance) - Economic Studies department}{Paris, France}
+      {Intern - Implementating dynamic economic dashboards}{July -- August 2008}
+     
+
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug. 2012 -- Dec. 2013}
+      {Telecom ParisTech}{Paris, France}
+      {Post Master’s degree in Machine Learning and Big Data (“Mastère spécialisé”)}{October 2013 -- June 2014}
     \resumeSubheading
-      {Birla Institute of Technology and Science}{Pilani, India}
-      {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
+      {University of Washington}{Seatle, USA}
+      {Certificate in Data Science - Distance training}{January -- June 2013}
+    \resumeSubheading
+      {ENSAI, National School for Statistics and Information Analysis}{Rennes, France}
+      {Master of Science in Statistics equivalent (“Diplôme d’ingénieur”)}{2005 -- 2010}
   \resumeSubHeadingListEnd
+  
+%-------- Patents ------------
+\section{Patents}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+Methods and Systems for Training Attribute Prediction Models & Filed - September 2021\\
+Method, Program, and Apparatus for Processing Sensitive Data & Filed - November 2021\\
+Transaction Data Processing Systems and Methods & Published - June 2022\\
+\end{tabular*}
+
+%-------- Research------------
+\section{Research} 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+Physician understanding, explainability, and trust in a hypothetical ML risk calculator & JAMIA 2019\\
+{\small Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software} & HINZ 2019\\
+Inspecting a ML-based clinical risk calculator: a practical perspective & IEEE CBMS 2019\\
+Interpretable ML for healthcare & HINZ 2018\\
+Improving clinical named entity recognition with transfer learning &  HIC 2018\\
+HOPE (Health Outcomes Prediction Engine) for stroke & HINZ 2017\\
+New Zealand health data review & HINZ 2017\\
+\end{tabular*}
+
+%-------- Certifications------------
+\section{Certifications}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+Google Cloud Platform Developer & Google \\
+SAS Base programming & SAS Institute inc.\\
+Developer for Apache Hadoop & Cloudera\\
+Apache Spark Developer & Databricks\\
+Data Science Associate & EMC\\
+Machine learning & Coursera \\
+Introduction to deep learning & Coursera\\
+Natural language processing & Coursera\\
+A crash course in causality: inferring causal effects from observational data & Coursera\\
+Bayesian methods for machine learning & Coursera\\ 
+Data analysis & Coursera\\
+Computing for data analysis & Coursera\\
+Social network analysis & Coursera\\
+How to win a data science competition: learn from top kagglers & Coursera\\
+\end{tabular*}
 
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Google}{Mountain View, CA}
-      {Software Engineer}{Oct 2016 - Present}
-      \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
-      \resumeItemListEnd
-      
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-      \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+%-------- Interests ------------
+\section{Interests}
+Judo (2nd degree black belt, coaching, club secretary)\\
+Surf\\French Cinema\\
+Hackathons\\
 
 
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-  \resumeSubHeadingListEnd
-
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
-
-
-%-------------------------------------------
 \end{document}
