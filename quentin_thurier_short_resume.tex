@@ -39,12 +39,16 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-10pt}\scshape\raggedright
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{blue}\hrulefill \vspace{-5pt}]
 
 % Custom commands
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\renewcommand{\section}[1]{
+  {\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.2cm}}
+}
 
 
 \newcommand{\resumeItem}[1]{
@@ -85,26 +89,24 @@
 \end{center}
 
 I thrive in cross functional teams working at the interface between industry and academic research in order to craft and develop great Machine Learning based products. 
-\section{Skills}
-\skillGroup {Languages}{Python, Bash, SQL}\\
-\skillGroup {Technologies}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, Hadoop, AWS, Google Cloud Platform}\\
+
+{\vspace{0.3cm}}
 
 %-----------EXPERIENCE-----------------
-\section{Work Experience}
- % \resumeSubHeadingListStart
-	
+\section{Experience}
+
   \job {Senior ML Engineer}{Decoded Health}{Auckland}{June 2023 -- Present}
     \resumeItemListStart
-      \resumeItem {Rolled-out a fully automated medical intake process by implementing few-shot learning strategy for conversation summarisation, saving human in the loop contractors budget.}
-      \resumeItem {Improved clinical entity extraction F1-score by 25\% by using promp engineering strategies with Azure OpenAI.}
-      \resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform.}
+      \resumeItem {Reduced human in the loop contracting costs by rolling-out a fully automated patient conversation summarisation service with FastAPI.}
+      \resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform stack.}
+      \resumeItem {Increased clinical entity extraction F1-score by 25\% using OpenAI.}
     \resumeItemListEnd
 
 	\job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
       \resumeItemListStart
-        \resumeItem {Reduced the time spent on manual data entry by bookeepers by rolling-out a machine learning service on an AWS stack. It is used by 3M+ users and responds to 4M+ requests per day.}
-        \resumeItem {Led the deep learning research (50+ models experiments) on bank reconciliation recommendations using TensorFlow.}
-        \resumeItem {Simplified the data pipeline (PySpark) by halving the codebase and driving its migration to Snowflake and Prefect.}
+        \resumeItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning service to make bank reconciliation recommendations (4M+ requests per day).}
+        \resumeItem {Led the research (50+ models experiments) on deep learning applied to bank statements using TensorFlow and AWS.}
+        \resumeItem {Simplified a data pipeline (PySpark) by halving the codebase and driving its migration to Snowflake and Prefect.}
         \resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
         \resumeItem {Patented 3 inventions in collaboration with the intellectual property team.}
         \resumeItem {Supervised 1 applied scientist and 3 graduates among which 2 became ML engineers.}
@@ -134,16 +136,21 @@ I thrive in cross functional teams working at the interface between industry and
 
     \job {Data Manager}{NetBooster}{Paris}{2015}
         \resumeItemListStart
-          \resumeItem {Implemented data-driven digital marketing solutions leveraging web server logs on a GCP stack with Python.}
+          \resumeItem {Implemented digital marketing solutions with Python leveraging web server logs on a Google Cloud Platform stack.}
         \resumeItemListEnd
 
     \job {Statistician}{Société Générale}{Paris}{2010 -- 2013}
       \resumeItemListStart
         \resumeItem {Rolled-out a network analysis software to prevent unauthorized trading in response to a significant financial loss.}
       \resumeItemListEnd
-    
+
+
+\section{Skills}
+\skillGroup {Languages}{Python, Bash, SQL}
+\skillGroup {Technologies}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, Hadoop, AWS, Google Cloud Platform}
+      
 %-----------EDUCATION-----------------
-\section{Education}
+\section{\color{blue}Education}
   \degree {Post Master’s Degree}{ML}{Telecom ParisTech}{2014}
   \degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
 
