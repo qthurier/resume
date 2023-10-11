@@ -55,7 +55,7 @@
   \item\small{#1 \vspace{-6pt}}
 }
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.2cm, leftmargin=0.6cm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.2cm, leftmargin=0.4cm]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{8pt}}
 
 
@@ -77,10 +77,15 @@
     \end{tabular}
 }
 
+\newcommand{\project}[4]{
+    \begin{tabular}{p{17.4cm}p{1cm}}
+      \hspace{-0.7em} \small{#1} (\small{#2}) & \hfill \textit{\small{#4}}
+    \end{tabular}
+}
+
 
 \begin{document} 
 
-%-----------HEADER-----------------
 \begin{center}
   \textbf{\Large Quentin-Gabriel Thurier} \\
   \small{New Zealand} \textbar{}
@@ -92,90 +97,89 @@ I thrive in cross functional teams working at the interface between industry and
 
 {\vspace{0.3cm}}
 
-%-----------EXPERIENCE-----------------
 \section{Experience}
+\job {Senior ML Engineer}{Decoded Health}{Auckland}{June 2023 -- Present}
+\resumeItemListStart
+\resumeItem {Reduced human in the loop contracting costs by rolling-out a fully automated patient conversation summarisation service with FastAPI.}
+\resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform stack.}
+\resumeItem {Increased clinical entity extraction F1-score by 25\% using OpenAI.}
+\resumeItemListEnd
 
-  \job {Senior ML Engineer}{Decoded Health}{Auckland}{June 2023 -- Present}
-    \resumeItemListStart
-      \resumeItem {Reduced human in the loop contracting costs by rolling-out a fully automated patient conversation summarisation service with FastAPI.}
-      \resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform stack.}
-      \resumeItem {Increased clinical entity extraction F1-score by 25\% using OpenAI.}
-    \resumeItemListEnd
+\job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
+\resumeItemListStart
+\resumeItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning service to make bank reconciliation recommendations (4M+ requests per day).}
+\resumeItem {Led the research (50+ models experiments) on deep learning applied to bank statements using TensorFlow and AWS.}
+\resumeItem {Simplified a data pipeline (PySpark) by halving the codebase and driving its migration to Snowflake and Prefect.}
+\resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
+\resumeItem {Patented 3 inventions in collaboration with the intellectual property team.}
+\resumeItem {Supervised 1 applied scientist and 3 graduates among which 2 became ML engineers.}
+\resumeItemListEnd
 
-	\job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
-      \resumeItemListStart
-        \resumeItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning service to make bank reconciliation recommendations (4M+ requests per day).}
-        \resumeItem {Led the research (50+ models experiments) on deep learning applied to bank statements using TensorFlow and AWS.}
-        \resumeItem {Simplified a data pipeline (PySpark) by halving the codebase and driving its migration to Snowflake and Prefect.}
-        \resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
-        \resumeItem {Patented 3 inventions in collaboration with the intellectual property team.}
-        \resumeItem {Supervised 1 applied scientist and 3 graduates among which 2 became ML engineers.}
-      \resumeItemListEnd
-
-	\job {NLP Engineer}{PredictHQ}{Auckland}{May 2019 -- November 2020}
-      \resumeItemListStart
-          \resumeItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
-          \resumeItem {Increased by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
-          \resumeItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
-        \resumeItemListEnd	
+\job {NLP Engineer}{PredictHQ}{Auckland}{May 2019 -- November 2020}
+\resumeItemListStart
+\resumeItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
+\resumeItem {Improved by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
+\resumeItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
+\resumeItemListEnd	
 	
-    \job {Data Scientist}{Orion Health}{Auckland}{January 2017 -- April 2019}
-      \resumeItemListStart
-        \resumeItem {Rolled-out an ensemble classifier (scikit-Learn) to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
-        \resumeItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 2 peer-reviewed publications.}
-        \resumeItem {Started off 3 product features by delivering deep learning prototypes with TensorFlow and Keras.}
-        \resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
-        \resumeItem {Presented and shared my work at 4 venues, including the Ministry of Health.}
-        \resumeItem {Mentored 3 data scientists and supervised 4 interns among which one was hired.}
-      \resumeItemListEnd
+\job {Data Scientist}{Orion Health}{Auckland}{2017 -- April 2019}
+\resumeItemListStart
+\resumeItem {Rolled-out an ensemble classifier (scikit-Learn) to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
+\resumeItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 2 peer-reviewed publications.}
+\resumeItem {Started off 3 product features by delivering deep learning prototypes with TensorFlow and Keras.}
+\resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
+\resumeItem {Presented and shared my work at 4 venues, including the Ministry of Health.}
+\resumeItem {Mentored 3 data scientists and supervised 4 interns among which one was hired.}
+\resumeItemListEnd
 
-    \job {Data Scientist}{Qrious}{Auckland}{2016}
-      \resumeItemListStart
-        \resumeItem {Delivered geospatial insights using mobile phone activity and public Wi-Fi data with Python, Hadoop \& Spark.}
-      \resumeItemListEnd
+\job {Data Scientist}{Qrious}{Auckland}{2016}
+\resumeItemListStart
+\resumeItem {Delivered geospatial insights using mobile phone activity and public Wi-Fi data with Python, Hadoop \& Spark.}
+\resumeItemListEnd
 
-    \job {Data Manager}{NetBooster}{Paris}{2015}
-        \resumeItemListStart
-          \resumeItem {Implemented digital marketing solutions with Python leveraging web server logs on a Google Cloud Platform stack.}
-        \resumeItemListEnd
+\job {Data Manager}{NetBooster}{Paris}{2015}
+\resumeItemListStart
+\resumeItem {Implemented digital marketing solutions with Python leveraging web server logs data on Google Cloud Platform.}
+\resumeItemListEnd
 
-    \job {Statistician}{Société Générale}{Paris}{2010 -- 2013}
-      \resumeItemListStart
-        \resumeItem {Rolled-out a network analysis software to prevent unauthorized trading in response to a significant financial loss.}
-      \resumeItemListEnd
+\job {Statistician}{Société Générale}{Paris}{2010 -- 2013}
+\resumeItemListStart
+\resumeItem {Implemented a network analysis and unsupervised machine learning software to prevent unauthorized trading.}
+\resumeItemListEnd
 
 
 \section{Skills}
-\skillGroup {Languages}{Python, Bash, SQL}
-\skillGroup {Technologies}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, Hadoop, AWS, Google Cloud Platform}
-      
-%-----------EDUCATION-----------------
-\section{\color{blue}Education}
-  \degree {Post Master’s Degree}{ML}{Telecom ParisTech}{2014}
-  \degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
+\skillGroup {Languages}{Python, Bash, SQL, R}
+\skillGroup {Technologies}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, Hadoop, AWS, Google Cloud Platform, Git, Docker}
+   
+
+\section{Education}
+\degree {Post Master's Degree}{ML}{Telecom ParisTech}{2014}
+\degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
+
+{\vspace{0.3cm}}
 
 %-------- Patents ------------
 \section{Patents}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-{\small Method, Program, and Apparatus for Processing Sensitive Data} & {\small May 2023}\\
-{\small Methods and Systems for Training Attribute Prediction Models} & {\small March 2023}\\
-{\small Transaction Data Processing Systems and Methods} & {\small June 2022}\\
-\end{tabular*}
+\project {Method, Program, and Apparatus for Processing Sensitive Data}{}{}{2023}
+\project {Methods and Systems for Training Attribute Prediction Models}{}{}{2023}
+\project {Transaction Data Processing Systems and Methods}{}{}{2022}
+
+{\vspace{0.3cm}}
 
 %-------- Research------------
 \section{Research} 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-{\small Physician understanding, explainability, and trust in a hypothetical ML risk calculator} & {\small JAMIA 2019}\\
-{\small Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software} & {\small HINZ 2019}\\
-{\small Inspecting a ML-based clinical risk calculator: a practical perspective} & {\small IEEE CBMS 2019}\\
-{\small Interpretable ML for healthcare} & {\small HINZ 2018}\\
-{\small Improving clinical named entity recognition with transfer learning} & {\small HIC 2018}\\
-{\small HOPE (Health Outcomes Prediction Engine) for stroke} & {\small HINZ 2017}\\
-{\small New Zealand health data review} & {\small HINZ 2017}\\
-\end{tabular*}
+\project {Physician understanding, explainability, and trust in a hypothetical ML risk calculator}{JAMIA}{}{2019}
+\project {Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software}{HINZ}{}{2019}
+\project {Inspecting a ML-based clinical risk calculator: a practical perspective}{IEEE}{}{2019}
+\project {Interpretable ML for healthcare}{HINZ}{}{2018}
+\project {Improving clinical named entity recognition with transfer learning}{HIC}{}{2018}
+\project {Health outcomes prediction engine for stroke}{HINZ}{}{2017}
+\project {New Zealand health data review}{HINZ}{}{2017}
+
+{\vspace{0.3cm}}
 
 %-------- Interests ------------
 \section{Interests}
-{\small Judo (second degree black belt, New Zealand nationals medalist, coach \& former club secretary)}, {\small Surfing}, {\small French Cinema}
 
 \end{document}
