@@ -1,0 +1,174 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+
+
+\pagestyle{fancy}
+\fancyhf % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+%\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-6pt}}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.2cm, leftmargin=0.6cm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{8pt}}
+
+
+\newcommand{\job}[4]{
+    \begin{tabular}{p{7cm}p{6cm}p{5cm}}
+      \hspace{-0.7em} \textbf{#1} & \textbf{\small{#2}} & \hfill \textit{\small{#4}}
+    \end{tabular}
+}
+
+\newcommand{\degree}[4]{
+    \begin{tabular}{p{7cm}p{6cm}p{5cm}}
+      \hspace{-0.7em} \textbf{\small{#1}} (\small{#2}) & \small{#3} & \hfill \textit{\small{#4}}
+    \end{tabular}
+}
+
+\newcommand{\skillGroup}[2]{
+    \begin{tabular}{p{7cm}p{11cm}}
+      \hspace{-0.7em} \textbf{\small{#1}} & \small{#2}
+    \end{tabular}
+}
+
+
+\begin{document} 
+
+%-----------HEADER-----------------
+\begin{center}
+  \textbf{\Large Quentin-Gabriel Thurier} \\
+  \small{New Zealand} \textbar{}
+  \small{quentin.thurier@gmail.com} \textbar{}
+  \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} \href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} 
+\end{center}
+
+I thrive in cross functional teams working at the interface between industry and academic research in order to craft and develop great Machine Learning based products. 
+\section{Skills}
+\skillGroup {Languages}{Python, Bash, SQL}\\
+\skillGroup {Technologies}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, Hadoop, AWS, Google Cloud Platform}\\
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+ % \resumeSubHeadingListStart
+	
+  \job {Senior ML Engineer}{Decoded Health}{Auckland}{June 2023 -- Present}
+    \resumeItemListStart
+      \resumeItem {Rolled-out a fully automated medical intake process by implementing few-shot learning strategy for conversation summarisation, saving human in the loop contractors budget.}
+      \resumeItem {Improved clinical entity extraction F1-score by 25\% by using promp engineering strategies with Azure OpenAI.}
+      \resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform.}
+    \resumeItemListEnd
+
+	\job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
+      \resumeItemListStart
+        \resumeItem {Reduced the time spent on manual data entry by bookeepers by rolling-out a machine learning service on an AWS stack. It is used by 3M+ users and responds to 4M+ requests per day.}
+        \resumeItem {Led the deep learning research (50+ models experiments) on bank reconciliation recommendations using TensorFlow.}
+        \resumeItem {Simplified the data pipeline (PySpark) by halving the codebase and driving its migration to Snowflake and Prefect.}
+        \resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
+        \resumeItem {Patented 3 inventions in collaboration with the intellectual property team.}
+        \resumeItem {Supervised 1 applied scientist and 3 graduates among which 2 became ML engineers.}
+      \resumeItemListEnd
+
+	\job {NLP Engineer}{PredictHQ}{Auckland}{May 2019 -- November 2020}
+      \resumeItemListStart
+          \resumeItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
+          \resumeItem {Increased by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
+          \resumeItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
+        \resumeItemListEnd	
+	
+    \job {Data Scientist}{Orion Health}{Auckland}{January 2017 -- April 2019}
+      \resumeItemListStart
+        \resumeItem {Rolled-out an ensemble classifier (scikit-Learn) to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
+        \resumeItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 2 peer-reviewed publications.}
+        \resumeItem {Started off 3 product features by delivering deep learning prototypes with TensorFlow and Keras.}
+        \resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
+        \resumeItem {Presented and shared my work at 4 venues, including the Ministry of Health.}
+        \resumeItem {Mentored 3 data scientists and supervised 4 interns among which one was hired.}
+      \resumeItemListEnd
+
+    \job {Data Scientist}{Qrious}{Auckland}{2016}
+      \resumeItemListStart
+        \resumeItem {Delivered geospatial insights using mobile phone activity and public Wi-Fi data with Python, Hadoop \& Spark.}
+      \resumeItemListEnd
+
+    \job {Data Manager}{NetBooster}{Paris}{2015}
+        \resumeItemListStart
+          \resumeItem {Implemented data-driven digital marketing solutions leveraging web server logs on a GCP stack with Python.}
+        \resumeItemListEnd
+
+    \job {Statistician}{Société Générale}{Paris}{2010 -- 2013}
+      \resumeItemListStart
+        \resumeItem {Rolled-out a network analysis software to prevent unauthorized trading in response to a significant financial loss.}
+      \resumeItemListEnd
+    
+%-----------EDUCATION-----------------
+\section{Education}
+  \degree {Post Master’s Degree}{ML}{Telecom ParisTech}{2014}
+  \degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
+
+%-------- Patents ------------
+\section{Patents}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+{\small Method, Program, and Apparatus for Processing Sensitive Data} & {\small May 2023}\\
+{\small Methods and Systems for Training Attribute Prediction Models} & {\small March 2023}\\
+{\small Transaction Data Processing Systems and Methods} & {\small June 2022}\\
+\end{tabular*}
+
+%-------- Research------------
+\section{Research} 
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+{\small Physician understanding, explainability, and trust in a hypothetical ML risk calculator} & {\small JAMIA 2019}\\
+{\small Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software} & {\small HINZ 2019}\\
+{\small Inspecting a ML-based clinical risk calculator: a practical perspective} & {\small IEEE CBMS 2019}\\
+{\small Interpretable ML for healthcare} & {\small HINZ 2018}\\
+{\small Improving clinical named entity recognition with transfer learning} & {\small HIC 2018}\\
+{\small HOPE (Health Outcomes Prediction Engine) for stroke} & {\small HINZ 2017}\\
+{\small New Zealand health data review} & {\small HINZ 2017}\\
+\end{tabular*}
+
+%-------- Interests ------------
+\section{Interests}
+{\small Judo (second degree black belt, New Zealand nationals medalist, coach \& former club secretary)}, {\small Surfing}, {\small French Cinema}
+
+\end{document}
