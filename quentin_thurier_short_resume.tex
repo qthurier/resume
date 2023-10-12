@@ -5,7 +5,8 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+%\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -44,6 +45,7 @@
 \renewcommand{\section}[1]{{\vspace{0.3cm}}{\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.2cm}}}
 
 \newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
+\newcommand{\resumeItemListNoBulletStart}{\begin{itemize}[label={}, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
@@ -151,19 +153,49 @@ I thrive in cross functional teams working at the interface between industry and
 \degree {Post Master's Degree}{ML}{Telecom ParisTech}{2014} \vspace{0.2cm}
 \degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
 
-\vspace{-0.6cm} \section{Patents}
+\vspace{-0.5cm} \section{Patents}
 \patent {Method, Program, and Apparatus for Processing Sensitive Data}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023085952&_cid=P10-LMZUVY-56049-1}{2023} 
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes blabla blaba blaaa.}}
+\resumeItemListEnd \vspace{0.2cm}
 \patent {Methods and Systems for Training Attribute Prediction Models}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023043322&_cid=P10-LNMGHN-54029-1}{2023}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd \vspace{0.2cm}
 \patent {Transaction Data Processing Systems and Methods}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022139595&_cid=P10-LNMGJ0-54386-1}{2022}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd
 
-\vspace{-0.5cm} \section{Research}
-\paper {Physician understanding, explainability, and trust in a hypothetical ML risk calculator}{}{JAMIA}{2019}
-\paper {Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software}{}{HINZ}{2019}
-\paper {Inspecting a ML-based clinical risk calculator: a practical perspective}{}{IEEE}{2019}
-\paper {Interpretable ML for healthcare}{}{HINZ}{2018}
-\paper {Improving clinical named entity recognition with transfer learning}{}{HIC}{2018}
-\paper {Health outcomes prediction engine for stroke}{}{HINZ}{2017}
-\paper {New Zealand health data review}{}{HINZ}{2017}
+\vspace{-0cm} \section{Research}
+\paper {Physician understanding, explainability, and trust in a hypothetical ML risk calculator}{https://pubmed.ncbi.nlm.nih.gov/32106285/}{JAMIA}{2019} %98
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{This paper has been quoted 98 times.}}
+\resumeItemListEnd \vspace{0.2cm}
+\paper {Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software}{https://ebooks.hinz.nz/view/564619932/38/}{HINZ}{2019}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd \vspace{0.2cm}
+\paper {Inspecting a ML-based clinical risk calculator: a practical perspective}{https://ieeexplore.ieee.org/abstract/document/8787409}{IEEE}{2019}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd \vspace{0.2cm}
+\paper {Interpretable ML for healthcare}{https://ebooks.hinz.nz/view/564876691/}{HINZ}{2018}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd \vspace{0.2cm}
+\paper {Improving clinical named entity recognition with transfer learning}{https://ebooks.iospress.nl/volumearticle/49627}{HIC}{2018}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd \vspace{0.2cm}
+\paper {Health outcomes prediction engine for stroke}{https://ebooks.hinz.nz/view/565138579/}{HINZ}{2017}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeItemListEnd \vspace{0.2cm}
+\paper {New Zealand health data review}{https://ebooks.hinz.nz/view/565138579/}{HINZ}{2017}
+\resumeItemListNoBulletStart
+\resumeItem {\color{gray}{Reviewed publicly available health datasets in New Zealand and make them accessible to researchers.}}
+\resumeItemListEnd 
 
-\vspace{-0.5cm} \section{Interests}
+\vspace{-0cm} \section{Interests}
 \end{document}
