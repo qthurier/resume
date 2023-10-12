@@ -36,28 +36,16 @@
 \raggedright
 %\setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright
-}{}{0em}{}[\color{blue}\hrulefill \vspace{-5pt}]
-
 % Custom commands
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
-\renewcommand{\section}[1]{
-  {\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.2cm}}
-}
+\renewcommand{\section}[1]{{\vspace{0.3cm}}{\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.2cm}}}
 
-
-\newcommand{\resumeItem}[1]{
-  \item\small{#1 \vspace{-6pt}}
-}
-
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.2cm, leftmargin=0.4cm]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{8pt}}
-
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \newcommand{\job}[4]{
     \begin{tabular}{p{7cm}p{6cm}p{5cm}}
@@ -77,9 +65,15 @@
     \end{tabular}
 }
 
-\newcommand{\project}[4]{
+\newcommand{\patent}[3]{
     \begin{tabular}{p{17.4cm}p{1cm}}
-      \hspace{-0.7em} \small{#1} (\small{#2}) & \hfill \textit{\small{#4}}
+      \hspace{-0.7em} \href{\detokenize{#2}}{\small{#1}} & \hfill \textit{\small{#3}}
+    \end{tabular}
+}
+
+\newcommand{\paper}[4]{
+    \begin{tabular}{p{17.4cm}p{1cm}}
+      \hspace{-0.7em} \href{\detokenize{#2}}{\small{#1}} (\textit{\small{#3}}) & \hfill \textit{\small{#4}}
     \end{tabular}
 }
 
@@ -90,20 +84,19 @@
   \textbf{\Large Quentin-Gabriel Thurier} \\
   \small{New Zealand} \textbar{}
   \small{quentin.thurier@gmail.com} \textbar{}
-  \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} \href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} 
+  \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} %\href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} 
 \end{center}
 
 I thrive in cross functional teams working at the interface between industry and academic research in order to craft and develop great Machine Learning based products. 
 
-{\vspace{0.3cm}}
-
 \section{Experience}
+
 \job {Senior ML Engineer}{Decoded Health}{Auckland}{June 2023 -- Present}
 \resumeItemListStart
 \resumeItem {Reduced human in the loop contracting costs by rolling-out a fully automated patient conversation summarisation service with FastAPI.}
 \resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform stack.}
-\resumeItem {Increased clinical entity extraction F1-score by 25\% using OpenAI.}
-\resumeItemListEnd
+\resumeItem {Improve clinical entity extraction F1-score by 23\% using OpenAI.}
+\resumeItemListEnd \vspace{0.2cm}
 
 \job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
 \resumeItemListStart
@@ -113,14 +106,14 @@ I thrive in cross functional teams working at the interface between industry and
 \resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
 \resumeItem {Patented 3 inventions in collaboration with the intellectual property team.}
 \resumeItem {Supervised 1 applied scientist and 3 graduates among which 2 became ML engineers.}
-\resumeItemListEnd
+\resumeItemListEnd \vspace{0.2cm}
 
 \job {NLP Engineer}{PredictHQ}{Auckland}{May 2019 -- November 2020}
 \resumeItemListStart
 \resumeItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
 \resumeItem {Improved by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
 \resumeItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
-\resumeItemListEnd	
+\resumeItemListEnd \vspace{0.2cm}
 	
 \job {Data Scientist}{Orion Health}{Auckland}{2017 -- April 2019}
 \resumeItemListStart
@@ -130,56 +123,46 @@ I thrive in cross functional teams working at the interface between industry and
 \resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
 \resumeItem {Presented and shared my work at 4 venues, including the Ministry of Health.}
 \resumeItem {Mentored 3 data scientists and supervised 4 interns among which one was hired.}
-\resumeItemListEnd
+\resumeItemListEnd \vspace{0.2cm}
 
 \job {Data Scientist}{Qrious}{Auckland}{2016}
 \resumeItemListStart
 \resumeItem {Delivered geospatial insights using mobile phone activity and public Wi-Fi data with Python, Hadoop \& Spark.}
-\resumeItemListEnd
+\resumeItemListEnd \vspace{0.2cm}
 
 \job {Data Manager}{NetBooster}{Paris}{2015}
 \resumeItemListStart
 \resumeItem {Implemented digital marketing solutions with Python leveraging web server logs data on Google Cloud Platform.}
-\resumeItemListEnd
+\resumeItemListEnd \vspace{0.2cm}
 
 \job {Statistician}{Société Générale}{Paris}{2010 -- 2013}
 \resumeItemListStart
 \resumeItem {Implemented a network analysis and unsupervised machine learning software to prevent unauthorized trading.}
-\resumeItemListEnd
-
+\resumeItemListEnd 
 
 \section{Skills}
-\skillGroup {Languages}{Python, Bash, SQL, R}
+
+\skillGroup {Languages}{Python, Bash, SQL, R} \vspace{0.2cm}
 \skillGroup {Technologies}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, Hadoop, AWS, Google Cloud Platform, Git, Docker}
    
-
 \section{Education}
-\degree {Post Master's Degree}{ML}{Telecom ParisTech}{2014}
+
+\degree {Post Master's Degree}{ML}{Telecom ParisTech}{2014} \vspace{0.2cm}
 \degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
 
-{\vspace{0.3cm}}
+\vspace{-0.6cm} \section{Patents}
+\patent {Method, Program, and Apparatus for Processing Sensitive Data}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023085952&_cid=P10-LMZUVY-56049-1}{2023} 
+\patent {Methods and Systems for Training Attribute Prediction Models}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023043322&_cid=P10-LNMGHN-54029-1}{2023}
+\patent {Transaction Data Processing Systems and Methods}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022139595&_cid=P10-LNMGJ0-54386-1}{2022}
 
-%-------- Patents ------------
-\section{Patents}
-\project {Method, Program, and Apparatus for Processing Sensitive Data}{}{}{2023}
-\project {Methods and Systems for Training Attribute Prediction Models}{}{}{2023}
-\project {Transaction Data Processing Systems and Methods}{}{}{2022}
+\vspace{-0.5cm} \section{Research}
+\paper {Physician understanding, explainability, and trust in a hypothetical ML risk calculator}{}{JAMIA}{2019}
+\paper {Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software}{}{HINZ}{2019}
+\paper {Inspecting a ML-based clinical risk calculator: a practical perspective}{}{IEEE}{2019}
+\paper {Interpretable ML for healthcare}{}{HINZ}{2018}
+\paper {Improving clinical named entity recognition with transfer learning}{}{HIC}{2018}
+\paper {Health outcomes prediction engine for stroke}{}{HINZ}{2017}
+\paper {New Zealand health data review}{}{HINZ}{2017}
 
-{\vspace{0.3cm}}
-
-%-------- Research------------
-\section{Research} 
-\project {Physician understanding, explainability, and trust in a hypothetical ML risk calculator}{JAMIA}{}{2019}
-\project {Smart MedRec: Using ML for reading dose instructions and incorporating this in clinical software}{HINZ}{}{2019}
-\project {Inspecting a ML-based clinical risk calculator: a practical perspective}{IEEE}{}{2019}
-\project {Interpretable ML for healthcare}{HINZ}{}{2018}
-\project {Improving clinical named entity recognition with transfer learning}{HIC}{}{2018}
-\project {Health outcomes prediction engine for stroke}{HINZ}{}{2017}
-\project {New Zealand health data review}{HINZ}{}{2017}
-
-{\vspace{0.3cm}}
-
-%-------- Interests ------------
-\section{Interests}
-
+\vspace{-0.5cm} \section{Interests}
 \end{document}
