@@ -1,11 +1,11 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage[document]{ragged2e}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-%\usepackage[usenames,dvipsnames]{color}
 \usepackage{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
@@ -47,6 +47,7 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
 \newcommand{\resumeItemListNoBulletStart}{\begin{itemize}[label={}, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
 \newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeJustifiedItem}[1]{\item\begin{justify}\small{#1}\end{justify}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \newcommand{\job}[4]{
@@ -79,6 +80,12 @@
     \end{tabular}
 }
 
+\newcommand{\interest}[2]{
+    \begin{tabular}{p{17.4cm}p{1cm}}
+      \hspace{-0.7em} {\small{#1}}
+    \end{tabular}
+}
+
 
 \begin{document} 
 
@@ -89,7 +96,11 @@
   \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} %\href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} 
 \end{center}
 
-I thrive in cross functional teams working at the interface between industry and academic research in order to craft and develop great Machine Learning based products. 
+\begin{justify}
+  I'm a seasoned machine learning practitionner with a strong scientific background who thrives in cross functional teams crafting products. I believe a short ideation-to-execution cycle drives success in this empirical discipline and I enjoy designing simple but robust systems to enable teams to do their best work.
+\end{justify}
+
+\vspace{-0.2cm}
 
 \section{Experience}
 
@@ -102,7 +113,7 @@ I thrive in cross functional teams working at the interface between industry and
 
 \job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
 \resumeItemListStart
-\resumeItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning service to make bank reconciliation recommendations (4M+ requests per day).}
+\resumeJustifiedItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning service to make bank reconciliation recommendations (4M+ requests per day).}
 \resumeItem {Led the research (50+ models experiments) on deep learning applied to bank statements using TensorFlow and AWS.}
 \resumeItem {Simplified a PySpark data pipeline by halving the codebase and driving its migration to Snowflake and Prefect.}
 \resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
@@ -112,14 +123,14 @@ I thrive in cross functional teams working at the interface between industry and
 
 \job {NLP Engineer}{PredictHQ}{Auckland}{May 2019 -- November 2020}
 \resumeItemListStart
-\resumeItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
-\resumeItem {Improved by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
-\resumeItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
+\resumeJustifiedItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
+\resumeJustifiedItem {Improved by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
+\resumeJustifiedItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
 \resumeItemListEnd \vspace{0.2cm}
 	
 \job {Data Scientist}{Orion Health}{Auckland}{2017 -- April 2019}
 \resumeItemListStart
-\resumeItem {Rolled-out an ensemble classifier (scikit-Learn) to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
+\resumeJustifiedItem {Rolled-out an ensemble classifier (scikit-Learn) to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
 \resumeItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 2 peer-reviewed publications.}
 \resumeItem {Started off 3 product features by delivering deep learning prototypes with TensorFlow and Keras.}
 \resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
@@ -156,41 +167,41 @@ I thrive in cross functional teams working at the interface between industry and
 \vspace{-0.5cm} \section{Patents}
 \patent {Method, Program, and Apparatus for Processing Sensitive Data}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023085952&_cid=P10-LMZUVY-56049-1}{2023} 
 \resumeItemListNoBulletStart
-\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes blabla blaba blaaa.}}
+\resumeJustifiedItem {\color{darkgray}{Described a hashing scheme that maintains a low collisions rate while training machine learning models on bank statements records in a privacy preserving setting.}}
 \resumeItemListEnd \vspace{0.2cm}
 \patent {Methods and Systems for Training Attribute Prediction Models}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023043322&_cid=P10-LNMGHN-54029-1}{2023}
 \resumeItemListNoBulletStart
-\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeJustifiedItem {\color{darkgray}{Introduced a custom loss that integrates accounting knowledge to improve machine learning models' predictions quality when classes follow a hierarchy.}}
 \resumeItemListEnd \vspace{0.2cm}
 \patent {Transaction Data Processing Systems and Methods}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022139595&_cid=P10-LNMGJ0-54386-1}{2022}
 \resumeItemListNoBulletStart
-\resumeItem {\color{gray}{Showed how an ensemble classifier trained on 5 years of stroke hospital records can predict inpatient health coutcomes.}}
+\resumeJustifiedItem {\color{darkgray}{Described a machine learning system to make bank reconciliation recommendations to save time to bookkeepers and accountants.}}
 \resumeItemListEnd
 
 \vspace{-0cm} \section{Research}
 \paper {Physician understanding, explainability, and trust in a hypothetical machine learning risk calculator}{https://pubmed.ncbi.nlm.nih.gov/32106285/}{JAMIA}{2019}
 \resumeItemListNoBulletStart
-\resumeItem {\color{darkgray}{Surveyed 1000+ physicians to investigate the association between physician understanding of machine learning outputs, their ability to explain these to patients, and their willingness to trust these, using various explainability methods. This article has been cited 98 times.}}
+\resumeJustifiedItem {\color{darkgray}{Surveyed 1000+ physicians to investigate the association between physician understanding of machine learning outputs, their ability to explain these to patients, and their willingness to trust these, using various explainability methods. This article has been cited 98 times.}}
 \resumeItemListEnd \vspace{0.2cm}
 \paper {Smart MedRec: Using machine learning for reading dose instructions and incorporating this in a software}{https://ebooks.hinz.nz/view/564619932/38/}{HINZ}{2019}
 \resumeItemListNoBulletStart
-\resumeItem {\color{darkgray}{Introduced a promising avenue to improve medication reconciliation, hence patient safety, by achieving 81\% accuracy with a deep learning model trained to automatically parse medication dosage instructions.}}
+\resumeJustifiedItem {\color{darkgray}{Introduced a promising avenue to improve medication reconciliation, hence patient safety, by achieving 81\% accuracy with a deep learning model trained to automatically parse medication dosage instructions.}}
 \resumeItemListEnd \vspace{0.2cm}
 \paper {Inspecting a machine learning based clinical risk calculator: a practical perspective}{https://ieeexplore.ieee.org/abstract/document/8787409}{IEEE}{2019}
 \resumeItemListNoBulletStart
-\resumeItem {\color{darkgray}{Suggested a modelling workflow to facilitate the use of model agnostic explainability methods and applied this to a machine learning mortality risk model.}}
+\resumeJustifiedItem {\color{darkgray}{Suggested a modelling workflow to facilitate the use of model agnostic explainability methods and applied this to a machine learning mortality risk model.}}
 \resumeItemListEnd \vspace{0.2cm}
 \paper {Interpretable machine learning for healthcare}{https://ebooks.hinz.nz/view/564876691/113/}{HINZ}{2018}
 \resumeItemListNoBulletStart
-\resumeItem {\color{darkgray}{Showed how the Python data science stack can be used to help clinicicans to audit black-box machine learning models, using the example of a hospital risk readmission model.}}
+\resumeJustifiedItem {\color{darkgray}{Showed how the Python data science stack can be used to help clinicicans to audit black-box machine learning models, using the example of a hospital risk readmission model.}}
 \resumeItemListEnd \vspace{0.2cm}
 \paper {Improving clinical named entity recognition with transfer learning}{https://ebooks.iospress.nl/volumearticle/49627}{HIC}{2018}
 \resumeItemListNoBulletStart
-\resumeItem {\color{darkgray}{Demonstrated the effectiveness of transfer learning for clinical named entity recognition by training a deep learning model on a heuristically labelled large dataset then fine-tuning it with a manually annotated dataset and comparing its performance with clinical concept extraction softwares.}}
+\resumeJustifiedItem {\color{darkgray}{Demonstrated the effectiveness of transfer learning for clinical named entity recognition by training a deep learning model on a heuristically labelled large dataset then fine-tuning it with a manually annotated dataset and comparing its performance with clinical concept extraction softwares.}}
 \resumeItemListEnd \vspace{0.2cm}
 \paper {Health outcomes prediction engine for stroke}{https://ebooks.hinz.nz/view/565138579/47/}{HINZ}{2017}
 \resumeItemListNoBulletStart
-\resumeItem {\color{darkgray}{Presented how machine learning can aid the communication of prognosis by training an ensemble classifier on 5 years of stroke hospital records that achieved an area under the ROC curve of 94\% when predicting inpatient death outcomes.}}
+\resumeJustifiedItem {\color{darkgray}{Presented how machine learning can aid the communication of prognosis by training an ensemble classifier on 5 years of stroke hospital records that achieved an area under the ROC curve of 94\% when predicting inpatient death outcomes.}}
 \resumeItemListEnd \vspace{0.2cm}
 \paper {New Zealand health data review}{https://ebooks.hinz.nz/view/565138579/65/}{HINZ}{2017}
 \resumeItemListNoBulletStart
@@ -198,4 +209,14 @@ I thrive in cross functional teams working at the interface between industry and
 \resumeItemListEnd 
 
 \vspace{-0cm} \section{Interests}
+
+\interest {Judo}{}
+\resumeItemListNoBulletStart
+\resumeJustifiedItem {\color{darkgray}{I'm a second degree black belt and I've been New Zealand nationals medalist 3 times. I'm very commited to my club where I coach and where I've been elected secretary for 3 consecutive terms.}}
+\resumeItemListEnd \vspace{0.2cm}
+\interest {Reading}{}
+\resumeItemListNoBulletStart
+\resumeJustifiedItem {\color{darkgray}{I'm a keen reader in a wide range of topics and books from novels to self-development by way of software engineering.}}
+\resumeItemListEnd \vspace{0.2cm}
+
 \end{document}
