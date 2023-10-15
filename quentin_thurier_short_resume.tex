@@ -52,7 +52,7 @@
 
 \newcommand{\job}[4]{
     \begin{tabular}{p{7cm}p{6cm}p{5cm}}
-      \hspace{-0.7em} \textbf{#1} & \textbf{\small{#2}} & \hfill \textit{\small{#4}}
+      \hspace{-0.7em} \textbf{#1} & \textbf{\small{#2}}\scriptsize{, #3} & \hfill \textit{\small{#4}}
     \end{tabular}
 }
 
@@ -63,7 +63,8 @@
 }
 
 \newcommand{\skillGroup}[2]{
-    \begin{tabular}{p{7cm}p{11cm}}
+    \begin{tabular}{p{7cm}p{11.5cm}}
+      %\hspace{-0.7em} \textbf{\small{#1}} & \footnotesize{#2}
       \hspace{-0.7em} \textbf{\small{#1}} & \small{#2}
     \end{tabular}
 }
@@ -76,7 +77,7 @@
 
 \newcommand{\paper}[4]{
     \begin{tabular}{p{17.4cm}p{1cm}}
-      \hspace{-0.7em} \href{\detokenize{#2}}{\small{#1}} (\textit{\small{#3}}) & \hfill \textit{\small{#4}}
+      \hspace{-0.7em} \href{\detokenize{#2}}{\small{#1}}\textit{\scriptsize{, #3}} & \hfill \textit{\small{#4}}
     \end{tabular}
 }
 
@@ -91,64 +92,64 @@
 
 \begin{center}
   \textbf{\Large Quentin-Gabriel Thurier} \\
-  \small{New Zealand} \textbar{}
   \small{quentin.thurier@gmail.com} \textbar{}
+  \small{+64 29 127 2170} \textbar{}
   \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} %\href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} 
 \end{center}
 
 \begin{justify}
-  I'm a seasoned machine learning practitionner with a strong scientific background who thrives in cross functional teams crafting products. I believe a short ideation-to-execution cycle drives success in this empirical discipline and I enjoy designing simple but robust systems to enable teams to do their best work.
+  Seasoned machine learning practitioner with 5 years experience in productionising models, 10+ years experience in the data science space and a proven track record in enabling teams to do their best work.
 \end{justify}
 
 \vspace{-0.2cm}
 
 \section{Experience}
 
-\job {Senior ML Engineer}{Decoded Health}{Auckland}{June 2023 -- Present}
+\job {Senior ML Engineer}{Decoded Health}{New Zealand}{June 2023 -- Present}
 \resumeItemListStart
-\resumeItem {Reduced human-in-the-loop costs by rolling-out a patient conversation automation summarisation service with FastAPI.}
+\resumeItem {Reduced human-in-the-loop costs by rolling-out a patient conversation summarisation service with FastAPI.}
 \resumeItem {Established standards for data versioning and machine learning services observability on a Google Cloud Platform stack.}
 \resumeItem {Improved clinical named entity recognition F1-score by 23\% using OpenAI API.}
 \resumeItemListEnd \vspace{0.2cm}
 
-\job {Senior Applied Scientist}{Xero}{Auckland}{November 2020 -- May 2023}
+\job {Senior Applied Scientist}{Xero}{New Zealand}{November 2020 -- May 2023}
 \resumeItemListStart
-\resumeJustifiedItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning service to make bank reconciliation recommendations (4M+ requests per day).}
-\resumeItem {Led the research (50+ models experiments) on deep learning applied to bank statements using TensorFlow and AWS.}
+\resumeJustifiedItem {Saved 1.5M small businesses 10,000+ hours of manual data entry per month by rolling-out a machine learning API to make bank reconciliation recommendations. This API serves 4M+ requests per day and help bookkeepers across the world.}
+\resumeJustifiedItem {Led the deep learning research, developing, reviewing and deploying 50+ models candidates with TensorFlow and AWS.}
 \resumeItem {Simplified a PySpark data pipeline by halving the codebase and driving its migration to Snowflake and Prefect.}
-\resumeItem {Streamlined and aligned models documentation across 4 cross-functional pods by integrating Jira \& Confluence.}
+\resumeItem {Streamlined and aligned experiments documentation across 4 cross-functional pods by integrating Jira and Confluence.}
+\resumeItem {Managed 1 applied scientist and 3 graduates among which 2 became ML engineers.}
 \resumeItem {Patented 3 inventions in collaboration with the intellectual property team.}
-\resumeItem {Supervised 1 applied scientist and 3 graduates among which 2 became ML engineers.}
 \resumeItemListEnd \vspace{0.2cm}
 
-\job {NLP Engineer}{PredictHQ}{Auckland}{May 2019 -- November 2020}
+\job {NLP Engineer}{PredictHQ}{New Zealand}{May 2019 -- November 2020}
 \resumeItemListStart
-\resumeJustifiedItem {Reduced the overall records duplication rate to 3\% by rolling-out a random forest classifier for event entity resolution with scikit-learn, giving the company a competitive edge in the events data providers space.}
+\resumeJustifiedItem {Brought the company to a leading position in the events (concerts, conferences and sports) data providers space by reducing its records duplication rate to 3\% after rolling-out a random forest classifier for event entity resolution with scikit-learn.}
 \resumeJustifiedItem {Improved by a factor of 10 the level of granularity of events categorisation by rolling-out an ontology-based classifier using spaCy, improving downstream machine learning models performance.}
 \resumeJustifiedItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
 \resumeItemListEnd \vspace{0.2cm}
 	
-\job {Data Scientist}{Orion Health}{Auckland}{2017 -- April 2019}
+\job {Data Scientist}{Orion Health}{New Zealand}{2017 -- April 2019}
 \resumeItemListStart
-\resumeJustifiedItem {Rolled-out an ensemble classifier (scikit-Learn) to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
-\resumeItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 2 peer-reviewed publications.}
-\resumeItem {Started off 3 product features by delivering deep learning prototypes with TensorFlow and Keras.}
+\resumeJustifiedItem {Rolled-out an ensemble classifier using scikit-learn to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
+\resumeJustifiedItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 1 article in peer-reviewed journal with 20\% acceptance rate.}
+\resumeItem {Initiated 2 products features by delivering deep learning prototypes with TensorFlow and Keras.}
 \resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
-\resumeItem {Presented and shared my work at 3 health informatics conferences and 2 ministries.}
-\resumeItem {Mentored 3 data scientists and supervised 4 interns among which one was hired.}
+\resumeItem {Presented research projects at 3 health informatics conferences and 2 ministries.}
+\resumeItem {Mentored 3 data scientists and supervised 4 interns among which 1 was hired.}
 \resumeItemListEnd \vspace{0.2cm}
 
-\job {Data Scientist}{Qrious}{Auckland}{2016}
+\job {Data Scientist}{Qrious}{New Zealand}{2016}
 \resumeItemListStart
 \resumeItem {Delivered geospatial insights using mobile phone activity and public Wi-Fi data with Python \& Spark.}
 \resumeItemListEnd \vspace{0.2cm}
 
-\job {Data Manager}{NetBooster}{Paris}{2015}
+\job {Data Manager}{NetBooster}{France}{2015}
 \resumeItemListStart
 \resumeItem {Implemented digital marketing solutions with Python leveraging web server logs data on Google Cloud Platform.}
 \resumeItemListEnd \vspace{0.2cm}
 
-\job {Statistician}{Société Générale}{Paris}{2011 -- 2013}
+\job {Statistician}{Société Générale}{France}{2011 -- 2013}
 \resumeItemListStart
 \resumeItem {Implemented a network analysis and unsupervised machine learning software to prevent unauthorized trading.}
 \resumeItemListEnd 
@@ -156,7 +157,7 @@
 \section{Skills}
 
 \skillGroup {Languages}{Python, Bash, SQL, R}
-\skillGroup {Technologies and Tools}{TensorFlow, scikit-learn, spaCy, Snowflake, Spark, AWS, Google Cloud Platform, Git, Docker}
+\skillGroup {Technologies and Tools}{TensorFlow, scikit-learn, spaCy, Snowflake, Prefect, Spark, AWS, Google Cloud Platform, Git, Docker}
 \skillGroup {Science}{Deep Learning, ML, NLP, Statistics, Probability, Linear Algebra}
    
 \section{Education}
@@ -212,11 +213,11 @@
 
 \interest {Judo}{}
 \resumeItemListNoBulletStart
-\resumeJustifiedItem {\color{darkgray}{I'm a second degree black belt and I've been New Zealand nationals medalist 3 times. I'm very commited to my club where I coach and where I've been elected secretary for 3 consecutive terms.}}
+\resumeJustifiedItem {\color{darkgray}{Second degree black belt, 3 times New Zealand nationals medalist, coach and club secretary for 3 consecutive terms.}}
 \resumeItemListEnd \vspace{0.2cm}
 \interest {Reading}{}
 \resumeItemListNoBulletStart
-\resumeJustifiedItem {\color{darkgray}{I'm a keen reader in a wide range of topics and books from novels to self-development by way of software engineering.}}
+\resumeJustifiedItem {\color{darkgray}{Keen reader in a wide range of topics and books from novels to self-development by way of software engineering.}}
 \resumeItemListEnd \vspace{0.2cm}
 
 \end{document}
