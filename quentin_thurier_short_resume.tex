@@ -56,6 +56,18 @@
     \end{tabular}
 }
 
+\newcommand{\employer}[2]{
+    \begin{tabular}{p{7cm}p{6cm}p{5cm}}
+      \hspace{-0.7em} & \textbf{\small{#1}}\scriptsize{, #2} &
+    \end{tabular}
+}
+
+\newcommand{\jobRole}[2]{
+    \begin{tabular}{p{7cm}p{6cm}p{5cm}}
+      \hspace{-0.7em} \textbf{#1} & & \hfill \textit{\small{#2}}
+    \end{tabular}
+}
+
 \newcommand{\degree}[4]{
     \begin{tabular}{p{7cm}p{6cm}p{5cm}}
       \hspace{-0.7em} \textbf{\small{#1}} (\small{#2}) & \small{#3} & \hfill \textit{\small{#4}}
@@ -98,21 +110,30 @@
 \end{center}
 
 \begin{justify}
-  Seasoned machine learning practitioner with 8 years of experience in productionising models, 10+ years of experience in data science and a proven track record in enabling teams to do their best work.
+  Seasoned machine learning practitioner with 10+ years of experience productionising models, including 5 years of technical leadership and management.
 \end{justify}
 
 \vspace{-0.2cm}
 
 \section{Experience}
 
-\job {Lead ML Engineer}{Luxury Escapes}{Australia}{March 2024 -- Present}
+\employer {Luxury Escapes}{Australia}
+\jobRole {Principal ML Engineer}{October 2025 -- Present}
+\resumeItemListStart
+\resumeItem {Managed a team of 5 ML engineers, overseeing ML project delivery across personalisation, revenue management, and performance marketing, with \$10M+ in attributed annualised gross profit.}
+\resumeItem {Completed the hotel recommendation pipeline with a second-stage model, leading to a 7\% increase in conversion rate.}
+\resumeItem {Implemented the company's ML feature store to guarantee online-offline consistency for training and inference.}
+\resumeItem {Centralised 10+ company's ML models into a monorepo, increasing model development velocity.}
+\resumeItem {Implemented the V2 Inference Protocol across a low-code model serving layer, enabling a microservice architecture.}
+\resumeItemListEnd
+\jobRole {Lead ML Engineer}{March 2024 -- September 2025}
 \resumeItemListStart
 \resumeItem {Developed the first deep learning model at the company, increasing click-through rate on tours by 80\%.}
-\resumeItem {Revamped the hotel recommendation system using a vector search approach based on a two-tower architecture implemented with PyTorch and SageMaker, leading to a 6\% increase in conversion rate and \$4M in annual gross profit.}
-\resumeItem {Led MLOps initiatives, including data pipeline testing with dbt, model training orchestration with Airflow, model packaging, and feature store research and development.}
+\resumeItem {Shipped the company's first real-time inference model, increasing homepage click-through rate by 36\%.}
+\resumeItem {Revamped the hotel recommendation pipeline using a dense retrieval approach based on a two-tower architecture implemented with PyTorch and SageMaker, leading to a 6\% increase in conversion rate.}
+\resumeItem {Led MLOps initiatives, including data pipeline testing with dbt, model training orchestration with Airflow, and model packaging in AWS CodeArtifact.}
 \resumeItem {Collaborated with product managers to define value propositions, plan projects, and design A/B tests.}
-\resumeItem {Designed the candidate evaluation process and conducted 80+ interviews to build the ML engineering team.}
-\resumeItem {Managed a team of 1 junior and 2 senior ML engineers, overseeing ML project delivery across content personalisation, revenue management, customer retention, and acquisition.}
+\resumeItem {Designed the candidate evaluation process and conducted 100+ interviews to build the ML engineering team.}
 \resumeItemListEnd \vspace{0.2cm} 
 
 \job {Senior ML Engineer}{Decoded Health}{New Zealand}{June 2023 -- February 2024}
@@ -140,35 +161,17 @@
 %\resumeJustifiedItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
 \resumeItemListEnd \vspace{0.2cm}
 	
-\job {Data Scientist}{Orion Health}{New Zealand}{2017 -- April 2019}
-\resumeItemListStart
-\resumeJustifiedItem {Rolled out an ensemble classifier using scikit-learn to predict post stroke outcomes into Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
-\resumeJustifiedItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 1 article in a peer-reviewed journal with 20\% acceptance rate.}
-%\resumeItem {Initiated 2 product features by delivering deep learning prototypes with TensorFlow and Keras.}
-%\resumeItem {Enabled deep learning research in the team by building a GPU workstation with a \$8,000 budget.}
-%\resumeItem {Presented research projects at 3 health informatics conferences and 2 ministries.}
-%\resumeItem {Mentored 3 data scientists and supervised 4 interns, among which 1 became a data scientist.}
-\resumeItemListEnd \vspace{0.2cm}
-
-\job {Data Scientist}{Qrious}{New Zealand}{2016}
-\resumeItemListStart
-\resumeItem {Delivered geospatial insights using mobile phone activity and public Wi-Fi data with Python and Spark.}
-\resumeItemListEnd \vspace{0.2cm}
-
-\job {Data Manager}{NetBooster}{France}{2015}
-\resumeItemListStart
-\resumeItem {Implemented digital marketing solutions with Python leveraging web server logs data on Google Cloud Platform.}
-\resumeItemListEnd \vspace{0.2cm}
-
-\job {Statistician}{Société Générale}{France}{2011 -- 2013}
-\resumeItemListStart
-\resumeItem {Implemented a network analysis and unsupervised ML software to prevent unauthorized trading.}
-\resumeItemListEnd 
+\begin{tabular}{p{7cm}p{6cm}p{5cm}}
+  \hspace{-0.7em} \textbf{Data Scientist} & \textbf{\small{Orion Health}}\scriptsize{, New Zealand} & \hfill \textit{\small{2017 -- April 2019}} \\[0.75em]
+  \hspace{-0.7em} \textbf{Data Scientist} & \textbf{\small{Qrious}}\scriptsize{, New Zealand} & \hfill \textit{\small{2016}} \\[0.75em]
+  \hspace{-0.7em} \textbf{Data Manager} & \textbf{\small{NetBooster}}\scriptsize{, France} & \hfill \textit{\small{2015}} \\[0.75em]
+  \hspace{-0.7em} \textbf{Statistician} & \textbf{\small{Société Générale}}\scriptsize{, France} & \hfill \textit{\small{2011 -- 2013}}
+\end{tabular} 
 
 \section{Skills}
 
 \skillGroup {Languages}{Python, Bash, SQL, R}
-\skillGroup {Technologies and Tools}{PyTorch, TensorFlow, scikit-learn, spaCy, BigQuery, Snowflake, Airflow, Prefect, Spark, AWS, Google Cloud Platform, Git, dbt, Docker}
+\skillGroup {Technologies and Tools}{PyTorch, TensorFlow, scikit-learn, spaCy, Polars, BigQuery, Snowflake, Airflow, Prefect, Spark, AWS, GCP, Git, Cursor, Codex, dbt, Docker}
 \skillGroup {Science}{Deep Learning, ML, NLP, Statistics, Probability, Linear Algebra}
    
 \section{Education}
