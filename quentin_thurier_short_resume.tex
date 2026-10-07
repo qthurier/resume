@@ -42,10 +42,10 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
-\renewcommand{\section}[1]{{\vspace{0.3cm}}{\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.2cm}}}
+\renewcommand{\section}[1]{{\vspace{0.18cm}}{\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.15cm}}}
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
-\newcommand{\resumeItemListNoBulletStart}{\begin{itemize}[label={}, topsep=0.1cm, parsep=0cm, partopsep=0cm, itemsep=0.1cm, leftmargin=0.4cm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=$\circ$, topsep=0.06cm, parsep=0cm, partopsep=0cm, itemsep=0.06cm, leftmargin=0.4cm]}
+\newcommand{\resumeItemListNoBulletStart}{\begin{itemize}[label={}, topsep=0.06cm, parsep=0cm, partopsep=0cm, itemsep=0.06cm, leftmargin=0.4cm]}
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 \newcommand{\resumeJustifiedItem}[1]{\item\begin{justify}\small{#1}\end{justify}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
@@ -102,19 +102,26 @@
 
 \begin{document} 
 
-\begin{center}
-  \textbf{\Large Quentin-Gabriel Thurier} \\
-  \small{quentin.thurier@gmail.com} \textbar{}
-  \small{+61 402 681 011} \textbar{}
-  \href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.6,valign=b]{linkedin}} %\href{https://github.com/qthurier}{\includegraphics[scale=0.6, valign=b]{github}} 
-\end{center}
+\noindent
+\begin{minipage}[t]{0.42\textwidth}
+\vspace{0pt}
+\setlength{\parindent}{0pt}
+\justifying
+\hyphenpenalty=10000
+\noindent\small Seasoned machine learning practitioner with 10+ years of experience productionising models, including 5 years of technical leadership and management.
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+\vspace{0pt}
+\raggedleft
+\textbf{\large Quentin-Gabriel Thurier}\\[0.3em]
+{\small quentin.thurier@gmail.com}\\[0.08em]
+{\small +61 402 681 011} \textbar{}
+\href{https://www.linkedin.com/in/quentin-gabriel-thurier-36586021/}{\includegraphics[scale=0.55,valign=c]{linkedin}}
+\href{https://github.com/qthurier}{\includegraphics[scale=0.55,valign=c]{github}}
+\end{minipage}
 
-\begin{justify}
-  Seasoned machine learning practitioner with 10+ years of experience productionising models, including 5 years of technical leadership and management.
-\end{justify}
-
-\vspace{-0.2cm}
-
+\vspace{0.35cm}
 \section{Experience}
 
 \employer {Luxury Escapes}{Australia}
@@ -125,7 +132,7 @@
 \resumeItem {Implemented the company's ML feature store to guarantee online-offline consistency for training and inference.}
 \resumeItem {Centralised 10+ of the company's ML models into a monorepo, increasing model development velocity.}
 \resumeItem {Implemented the V2 Inference Protocol on a standardised serving runtime, enabling a microservice architecture.}
-\resumeItemListEnd
+\resumeItemListEnd \vspace{0.2cm}
 \jobRole {Lead ML Engineer}{March 2024 -- September 2025}
 \resumeItemListStart
 \resumeItem {Developed the first deep learning model at the company, increasing tours click-through rate by 80\%.}
@@ -161,77 +168,88 @@
 %\resumeItem {Led a 3-member team to deliver a gradient boosting regression model for concert events attendance prediction that decreased the mean absolute error down to 1000 attendees.}
 \resumeItemListEnd \vspace{0.2cm}
 	
+\job {Data Scientist}{Orion Health}{New Zealand}{2017 -- April 2019}
+\resumeItemListStart
+\resumeItem {Rolled out an ensemble classifier using scikit-learn to predict post-stroke outcomes at Auckland North Shore Hospital, achieving an area under the ROC curve of 94\% on inpatient death outcomes.}
+\resumeItem {Managed a \$300,000+ research budget and led a cross-functional 8-member team to deliver 2 interpretable machine learning models and 1 article in a peer-reviewed journal with 20\% acceptance rate.}
+\resumeItemListEnd \vspace{0.2cm}
+
 \begin{tabular}{p{7cm}p{6cm}p{5cm}}
-  \hspace{-0.7em} \textbf{Data Scientist} & \textbf{\small{Orion Health}}\scriptsize{, New Zealand} & \hfill \textit{\small{2017 -- April 2019}} \\[0.75em]
-  \hspace{-0.7em} \textbf{Data Scientist} & \textbf{\small{Qrious}}\scriptsize{, New Zealand} & \hfill \textit{\small{2016}} \\[0.75em]
-  \hspace{-0.7em} \textbf{Data Manager} & \textbf{\small{NetBooster}}\scriptsize{, France} & \hfill \textit{\small{2015}} \\[0.75em]
+  \hspace{-0.7em} \textbf{Data Scientist} & \textbf{\small{Qrious}}\scriptsize{, New Zealand} & \hfill \textit{\small{2016}} \\[1em]
+  \hspace{-0.7em} \textbf{Data Manager} & \textbf{\small{NetBooster}}\scriptsize{, France} & \hfill \textit{\small{2015}} \\[1em]
   \hspace{-0.7em} \textbf{Statistician} & \textbf{\small{Société Générale}}\scriptsize{, France} & \hfill \textit{\small{2011 -- 2013}}
 \end{tabular} 
 
+\newpage
+\renewcommand{\section}[1]{{\vspace{0.28cm}}{\scshape\color{blue}#1}{\color{blue}\hrulefill}{\vspace{0.16cm}}}
+\vspace{-0.28cm}
 \section{Skills}
 
-\skillGroup {Languages}{Python, Bash, SQL, R}
-\skillGroup {Technologies and Tools}{PyTorch, TensorFlow, scikit-learn, spaCy, Polars, BigQuery, Snowflake, Airflow, Prefect, Spark, AWS, GCP, Git, Cursor, Codex, dbt, Docker}
-\skillGroup {Science}{Deep Learning, ML, NLP, Statistics, Probability, Linear Algebra}
-   
+\begin{tabular}{p{7cm}p{11.5cm}}
+  \hspace{-0.7em} \textbf{\small{Languages}} & \small{Python, Bash, SQL, R} \\[0.45em]
+  \hspace{-0.7em} \textbf{\small{Technologies and Tools}} & \small{PyTorch, TensorFlow, scikit-learn, spaCy, Polars, BigQuery, Snowflake, Airflow, Prefect, Spark, AWS, GCP, Git, Cursor, Codex, dbt, Docker} \\[0.45em]
+  \hspace{-0.7em} \textbf{\small{Science}} & \small{Deep Learning, ML, NLP, Statistics, Probability, Linear Algebra}
+\end{tabular}
+
 \section{Education}
 
-\degree {Post Master's Degree}{ML}{Telecom ParisTech}{2014} \vspace{0.2cm}
-\degree {Master's Degree}{Statistics}{ENSAI}{2005 -- 2010}
+\begin{tabular}{p{7cm}p{6cm}p{5cm}}
+  \hspace{-0.7em} \textbf{\small{Post Master's Degree}} (\small{ML}) & \small{Telecom ParisTech} & \hfill \textit{\small{2014}} \\[0.45em]
+  \hspace{-0.7em} \textbf{\small{Master's Degree}} (\small{Statistics}) & \small{ENSAI} & \hfill \textit{\small{2005 -- 2010}}
+\end{tabular}
 
-\vspace{-0.5cm} \section{Patents}
+\section{Patents}
 \patent {Method, Program, and Apparatus for Processing Sensitive Data}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023085952&_cid=P10-LMZUVY-56049-1}{2023} 
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Described a hashing scheme that maintains a low collision rate while training machine learning models on bank statement records in a privacy-preserving setting.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \patent {Methods and Systems for Training Attribute Prediction Models}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023043322&_cid=P10-LNMGHN-54029-1}{2023}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Introduced a custom loss that integrates accounting knowledge to improve machine learning models' performance when classes follow a hierarchy.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \patent {Transaction Data Processing Systems and Methods}{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2022139595&_cid=P10-LNMGJ0-54386-1}{2022}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Described a machine learning system to make bank reconciliation recommendations to save time for bookkeepers and accountants.}}
 \resumeItemListEnd
 
-\vspace{-0cm} \section{Research}
+\section{Research}
 \paper {Physician understanding, explainability, and trust in a hypothetical machine learning risk calculator}{https://pubmed.ncbi.nlm.nih.gov/32106285/}{JAMIA}{2019}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Surveyed 1000+ physicians to investigate the association between physicians' understanding of machine learning outputs, their ability to explain these to patients, and their willingness to trust them, using various explainability methods. This article has been cited 200+ times.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \paper {Smart MedRec: Using machine learning for reading dose instructions and incorporating this in a software}{https://ebooks.hinz.nz/view/564619932/38/}{HINZ}{2019}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Introduced a promising avenue to improve medication reconciliation, hence patient safety, by achieving 81\% accuracy with a deep learning model trained to parse medication dosage instructions.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \paper {Inspecting a machine-learning-based clinical risk calculator: a practical perspective}{https://ieeexplore.ieee.org/abstract/document/8787409}{IEEE}{2019}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Suggested a modelling workflow to facilitate the use of model-agnostic explainability methods and applied this to a machine learning mortality risk model.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \paper {Interpretable machine learning for healthcare}{https://ebooks.hinz.nz/view/564876691/113/}{HINZ}{2018}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Showed how the Python data science stack can be used to help clinicians audit black-box machine learning models, using the example of a hospital readmission risk model.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \paper {Improving clinical named entity recognition with transfer learning}{https://ebooks.iospress.nl/volumearticle/49627}{HIC}{2018}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Demonstrated the effectiveness of transfer learning for clinical named entity recognition by training a deep learning model on a heuristically labelled large dataset then fine-tuning it with a manually annotated dataset and comparing its performance with several clinical concept extraction tools.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd \vspace{0.22cm}
 \paper {Health outcomes prediction engine for stroke}{https://ebooks.hinz.nz/view/565138579/47/}{HINZ}{2017}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Presented how machine learning can aid the communication of prognosis by training an ensemble classifier on 5 years of stroke hospital records that achieved an area under the ROC curve of 94\% for predicting inpatient death outcomes.}}
-\resumeItemListEnd \vspace{0.2cm}
-%\paper {New Zealand health data review}{https://ebooks.hinz.nz/view/565138579/65/}{HINZ}{2017}
-%\resumeItemListNoBulletStart
-%\resumeItem {\color{darkgray}{Improved health data accessibility for research by reviewing publicly available datasets and their relationships.}}
-%\resumeItemListEnd 
+\resumeItemListEnd \vspace{0.22cm}
+\paper {New Zealand health data review}{https://ebooks.hinz.nz/view/565138579/65/}{HINZ}{2017}
+\resumeItemListNoBulletStart
+\resumeItem {\color{darkgray}{Improved health data accessibility for research by reviewing publicly available datasets and their relationships.}}
+\resumeItemListEnd
 
-\vspace{-0cm} \section{Interests}
-
+\section{Interests}
 \interest {Judo}{}
 \resumeItemListNoBulletStart
 \resumeItem {\color{darkgray}{Second-degree black belt, three-time New Zealand nationals medallist, coach, and club secretary for 3 consecutive years.}}
-\resumeItemListEnd \vspace{0.2cm}
+\resumeItemListEnd
 %\interest {Reading}{}
 %\resumeItemListNoBulletStart
 %\resumeItem {\color{darkgray}{Keen reader of diverse subjects, including history, self-improvement, and software engineering.}}
-%\resumeItemListEnd \vspace{0.2cm}
+%\resumeItemListEnd
 
 \end{document}
